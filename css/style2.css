@@ -1,0 +1,215 @@
+/*THIS IS JUST FOR PRACTICE*/
+
+@import url('https://fonts.googleapis.com/css?family=Fredoka+One|Roboto+Condensed|Open+Sans');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-flow: row wrap;
+  text-align: center;
+  background-color: white;
+}
+
+nav{
+  display: block;
+  z-index: 1000;
+  position: fixed;
+  width: 100%;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+ul {
+  background-color: transparent;
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 1%;
+}
+
+
+li a{
+  justify-content: center;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  padding: 1rem 1.5rem;
+  position: relative;
+}
+
+li a:hover {
+  color: #000000;
+}
+
+.active{
+  text-decoration: underline;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown .dropcontent {
+  position: absolute;
+  margin: 0;
+  width: 100%;
+  display: none;
+}
+
+.dropdown .dropcontent li a{
+  display: flex;
+  justify-content: flex-start;
+  text-align: left;
+  margin: 0;
+}
+
+.dropdown:hover .dropcontent {
+  display: block;
+}
+
+.heroimg {
+  /*background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.3)), url('../images/monstera.jpg');*/
+  background: linear-gradient(to top, #e5acc8 1%, rgb(235, 143, 174) 41%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+
+#plantparenthood{
+  font-family: 'Fredoka One', cursive;
+  display: flex;
+  font-size: 5em;
+  color: white;
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+
+#grow{
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 1.5em;
+  color: white;
+}
+
+button{
+  border: 1px solid rgba(255, 255, 255, 0.39);
+  border-radius: 20px;
+  color: white;
+  background-color: transparent;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+button:hover{
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.container{
+  max-width:100%;
+  display: flex;
+  margin-top:15%;
+  padding-left: 10%;
+  padding-right: 10%;
+
+}
+
+/*Image & Text Grid Begin*/
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 4px 4px;
+  justify-content: space-around;
+  margin: 50px 6px 6px;
+}
+
+/* Creates three equal columns that sit next to each other */
+.column {
+    flex: 99%;
+    max-width: 33%;
+    padding: 4px 4px;
+    justify-content: space-around;
+}
+
+.column img,div {
+  margin-top: 12px;
+  vertical-align: middle;
+}
+
+.imgbox {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.txtboxw, .txtboxb {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.txtboxw {
+  color: black;
+  background-color: pink;
+  padding: 20px;
+}
+
+.txtboxb{
+  color: white;
+  background-color: black;
+  padding: 20px;
+}
+
+.imgboxcontainer{
+  position: relative;
+}
+
+.overlay {
+  position: absolute; 
+  bottom: 0; 
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  width: 100%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+}
+
+.imgboxcontainer:hover .overlay {
+  opacity: 1;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+    .column {
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .column {
+        flex: 100%;
+        max-width: 100%;
+    }
+}
+
+/*Image & Text Grid End*/
+
+footer{
+  display: flex;
+  font-family: 'Roboto Condensed', sans-serif;
+  width: 100%;
+  margin-top: 10%;
+  justify-content: center;
+  align-content: center;
+}
